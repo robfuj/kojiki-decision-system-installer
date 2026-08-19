@@ -1,0 +1,44 @@
+{
+  "decision_object": {
+    "decision_id": "INST-2026-001",
+    "decision_name": "Install for a 30-person SaaS",
+    "owning_function": "Decision System Installer",
+    "decision_owner_role": "Installer Agent",
+    "trigger_condition": "User wants a decision system for their org",
+    "current_state": "No workspace; 21 repos available",
+    "required_inputs": [
+      "user selection",
+      "orientation answers"
+    ],
+    "evidence_threshold": "Every installed agent has a recorded orientation + registry entry",
+    "available_options": [
+      "Install all 20",
+      "Install subset",
+      "Run org-builder first then install its output"
+    ],
+    "decision_criteria": "Match install to org size + regulated status",
+    "constraints": "Ontology repo always included",
+    "risk_level": "low",
+    "delegation_level": "Own",
+    "escalation_conditions": "User requests a non-existent agent",
+    "expected_outcome": "Scaffolded workspace + populated registry",
+    "verification_method": "validate.py passes on all installed repos; registry non-empty",
+    "actual_outcome": "8 agents installed + org-builder; registry populated",
+    "learning_extracted": "Small orgs over-select; guide toward fewer agents",
+    "rule_version": "INST-RULE-001",
+    "last_reviewed": "2026-08-18"
+  },
+  "learning_ledger": {
+    "case": "Install decision system for 30-person SaaS",
+    "decision": "Install subset (8) + org-builder",
+    "assumption": "User wants lean starting set",
+    "action": "Scaffold 8 lines + ontology; wire registry; orient",
+    "expected_result": "Working multi-agent workspace",
+    "actual_result": "8 agents + org-builder; registry populated",
+    "variance": "User picked fewer than offered",
+    "cause": "Small org needs fewer departments",
+    "learning": "Default-recommend a lean subset, not all 20",
+    "rule_update": "Installer should recommend a lean default subset, not all 20"
+  },
+  "orientation_required": true
+}

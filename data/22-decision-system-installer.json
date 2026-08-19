@@ -1,0 +1,58 @@
+{
+  "line": "Decision System Installer",
+  "key": "22-decision-system-installer",
+  "number": "22",
+  "primary_question": "Which executive agents should be installed, and how should the chosen decision system be scaffolded?",
+  "purpose": "Meta-installer: brings the shared ontology + the 20 line repos + the org-builder together, asks the user which executive agents they want to install, and scaffolds a working multi-agent workspace with the handoff registry wired so agents can communicate.",
+  "sub_functions": [
+    "Discovery",
+    "Selection Prompt",
+    "Workspace Scaffold",
+    "Registry Wiring",
+    "Orientation Orchestration",
+    "Validation"
+  ],
+  "roles": [
+    "Installer Agent",
+    "User (human or parent agent)"
+  ],
+  "inputs": "The 21 source repos (ontology + 20 lines + org-builder); user's selection of executive agents; orientation answers (industry, jurisdiction, etc.).",
+  "outputs": "A scaffolded workspace: chosen line repos + 00-kojiki-ontology, a populated handoffs/registry.json, an orientation state file, and a run order for cross-functional decisions.",
+  "learning_focus": "Which agent selections matched the org's needs; which agents were never used; scaffold gaps discovered during operation.",
+  "line_prompt": "You are the decision-system installer. Present the available executive agents (the 20 lines + the org-builder), ask the user which they want to install, then assemble the chosen set with the shared ontology, wire the handoff registry, and run each agent's Orientation Protocol in order.",
+  "operating_tree": [
+    "DISCOVER REPOS",
+    "PRESENT OPTIONS",
+    "USER SELECTS",
+    "SCAFFOLD WORKSPACE",
+    "WIRE REGISTRY",
+    "RUN ORIENTATION",
+    "VALIDATE",
+    "HANDOFF READY"
+  ],
+  "decision_states": [
+    "DISCOVERING",
+    "PRESENTING",
+    "SELECTING",
+    "SCAFFOLDING",
+    "WIRING",
+    "ORIENTING",
+    "VALIDATED",
+    "READY"
+  ],
+  "critical_prompts": [
+    "Which executive agents does the user want to install?",
+    "Should the org-builder run first?",
+    "Which lines are mandatory for this org?",
+    "Where should the workspace live?",
+    "How are agents wired to communicate?",
+    "What validates a correct install?"
+  ],
+  "decision_outputs": [
+    "Install All",
+    "Install Subset",
+    "Install With Org-Builder",
+    "Defer",
+    "Abort"
+  ]
+}
