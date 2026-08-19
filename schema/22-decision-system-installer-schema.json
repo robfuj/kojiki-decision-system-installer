@@ -1,5 +1,5 @@
 {
-  "$id": "https://hermes-ios.github.io/22-decision-system-installer.json",
+  "$id": "https://robfuj.github.io/22-decision-system-installer.json",
   "title": "Decision System Installer spec",
   "type": "object",
   "required": [
