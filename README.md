@@ -29,13 +29,13 @@ Which agent selections matched the org's needs; which agents were never used; sc
 ## Operating tree
 ```text
 DISCOVER REPOS →
-    PRESENT OPTIONS →
-    USER SELECTS →
-    SCAFFOLD WORKSPACE →
-    WIRE REGISTRY →
-    RUN ORIENTATION →
-    VALIDATE →
-    HANDOFF READY
+ PRESENT OPTIONS →
+ USER SELECTS →
+ SCAFFOLD WORKSPACE →
+ WIRE REGISTRY →
+ RUN ORIENTATION →
+ VALIDATE →
+ HANDOFF READY
 ```
 
 ## Decision states
@@ -54,10 +54,10 @@ DISCOVERING → PRESENTING → SELECTING → SCAFFOLDING → WIRING → ORIENTIN
 > How are agents wired to communicate?
 > What validates a correct install?
 
-## Canonical record schema (docx Learning Ledger + Decision Object Fields)
+## Canonical record schema (Learning Ledger + Decision Object Fields)
 Every decision in this line is recorded as:
-- a **Decision Object** (docx S9) — see `schema/decision-object.json`
-- a **Learning Ledger** entry (docx S7) — see `schema/learning-ledger.json`
+- a **Decision Object** — see `schema/decision-object.json`
+- a **Learning Ledger** entry — see `schema/learning-ledger.json`
 
 and the agent must run the **Orientation Protocol** first (see `AGENT.md`).
 
@@ -68,11 +68,11 @@ chain ([`00-kojiki-ontology/synapsis`](https://github.com/robfuj/kojiki-ontology
 SOURCE → RECORD → EVIDENCE → INTERPRETATION → STRATEGY → INTERACTION → OUTPUT → OUTCOME → LEARNING
 ```
 - **Three steps are dedicated niche bots**: `bots/evidence/` (this line's extraction
-  specialist); the shared `synapsis/audit-bot/` (independent audit, org-wide) and
-  `synapsis/learning-bot/` (cross-line memory). See `AGENT.md` for the full contract.
+ specialist); the shared `synapsis/audit-bot/` (independent audit, org-wide) and
+ `synapsis/learning-bot/` (cross-line memory). See `AGENT.md` for the full contract.
 - The rest run inline inside this line's agent, each bounded to one authority.
 - Meta-rule: *evidence ≠ interpretation ≠ belief ≠ doctrine.* Validate with
-  `python3 synapsis/validate.py <record.json>` (in the ontology repo).
+ `python3 synapsis/validate.py <record.json>` (in the ontology repo).
 
 ## How to use
 1. Read `AGENT.md` — the first-run Orientation Protocol.
